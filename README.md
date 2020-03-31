@@ -9,7 +9,9 @@
 </p>
 <br />
 
-- [Tabela de Conteúdo](#tabela-de-conte%C3%BAdo)
+## Referências
+
+- [Referências](#refer%C3%AAncias)
 - [Sobre o Projeto](#sobre-o-projeto)
 
 <!-- ABOUT THE PROJECT -->
