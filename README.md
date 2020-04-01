@@ -18,4 +18,4 @@
 
 ## Sobre o Projeto
 
-O serviço de entregas FastFeet é uma aplicação semelhante os corrêios. Administrador parte (web) e funcionarios/entregadore parte (mobile) consumindo API própria.
+O serviço de entregas FastFeet é uma aplicação semelhante aos corrêios. Administrador parte (web) e funcionarios/entregadore parte (mobile) consumindo API própria.
