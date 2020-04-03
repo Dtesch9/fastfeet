@@ -12,6 +12,7 @@ import Content from '~/components/Content';
 import ActionButton from '~/components/Action/ActionButton';
 import Action from '~/components/Action';
 import Modal from '~/components/Modal';
+import Pagination from '~/components/Pagination';
 
 import { Grid } from './styles';
 
@@ -20,13 +21,21 @@ export default function Problem() {
   const [problems, setProblems] = useState([]);
   const [toggle, setToggle] = useState({});
   const [modalInfo, setModalInfo] = useState({});
+  const [totalPages, setTotalPages] = useState(0);
+  const [page, setPage] = useState(1);
 
   useEffect(() => {
     async function loadProblems() {
       try {
         setLoading(true);
 
-        const response = await api.get('/delivery/problems');
+        const response = await api.get('/delivery/problems', {
+          params: { page },
+        });
+
+        const pageLimit = Math.ceil(response.headers['x-total-count'] / 10);
+
+        setTotalPages(pageLimit);
 
         const data = response.data.map(problem => ({
           problem_id: problem.id,
@@ -48,7 +57,7 @@ export default function Problem() {
     }
 
     loadProblems();
-  }, []);
+  }, [page]);
 
   function handleToggle(id) {
     const newToggle = produce(toggle, draft => {
@@ -75,6 +84,10 @@ export default function Problem() {
     } catch (error) {
       toast.error('Erro inesperado, tente novamente');
     }
+  }
+
+  function paginate(_, newPage) {
+    setPage(newPage);
   }
 
   return loading ? (
@@ -141,6 +154,13 @@ export default function Problem() {
         </Grid>
       </Content>
       <Modal data={modalInfo} cleanModal={setModalInfo} />
+
+      <Pagination
+        count={totalPages}
+        onChange={paginate}
+        variant="outlined"
+        shape="rounded"
+      />
     </>
   );
 }
