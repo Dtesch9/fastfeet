@@ -82,7 +82,7 @@ export default function CreateRecipient({ isEdit }) {
           complement,
           state,
           city,
-          postal_code,
+          postal_code: newPostal_code.replace('-', ''),
         });
 
         toast.success('Destinatário cadastrado com sucesso!');

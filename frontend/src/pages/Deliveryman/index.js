@@ -93,7 +93,7 @@ export default function Deliveryman() {
     if (confirmation) {
       await api.delete(`deliveryman/${id}`);
 
-      history.go(0);
+      setDeliverymen(deliverymen.filter(dmen => dmen.id !== id));
     }
   }
 

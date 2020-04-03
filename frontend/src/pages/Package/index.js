@@ -132,7 +132,7 @@ export default function Package() {
     if (confirmation) {
       await api.delete(`packages/${id}`);
 
-      history.go(0);
+      setPackages(packages.filter(pack => pack.id !== id));
     }
   }
 

@@ -92,7 +92,7 @@ export default function Recipient() {
     if (confirmation) {
       await api.delete(`recipients/${id}`);
 
-      history.go(0);
+      setRecipients(recipients.filter(reci => reci.id !== id));
     }
   }
 
