@@ -157,6 +157,7 @@ export default function Problem() {
 
       <Pagination
         count={totalPages}
+        page={page}
         onChange={paginate}
         variant="outlined"
         shape="rounded"

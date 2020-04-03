@@ -258,6 +258,7 @@ export default function Package() {
 
       <Pagination
         count={totalPages}
+        page={page}
         onChange={paginate}
         variant="outlined"
         shape="rounded"

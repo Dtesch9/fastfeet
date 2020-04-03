@@ -194,6 +194,7 @@ export default function Deliveryman() {
       </Content>
       <Pagination
         count={totalPages}
+        page={page}
         onChange={paginate}
         variant="outlined"
         shape="rounded"

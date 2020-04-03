@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { useRef, memo } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
@@ -9,15 +9,16 @@ import { Container, Content, Account } from './styles';
 import logo from '~/assets/fastfeet-logo.png';
 
 function Header() {
+  const userRef = useRef();
   const dispatch = useDispatch();
   const admin = useSelector(state => state.admin.profile.name);
 
-  function out(e) {
-    e.target.parentNode.children[0].innerText = 'logout';
+  function out() {
+    userRef.current.innerText = 'logout';
   }
 
-  function stay(e) {
-    e.target.parentNode.children[0].innerText = admin;
+  function stay() {
+    userRef.current.innerText = admin;
   }
 
   function logout() {
@@ -69,7 +70,7 @@ function Header() {
         </nav>
 
         <Account>
-          <strong>{admin}</strong>
+          <strong ref={userRef}>{admin}</strong>
           <button
             type="button"
             onClick={logout}

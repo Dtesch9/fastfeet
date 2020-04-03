@@ -174,6 +174,7 @@ export default function Recipient() {
       </Content>
       <Pagination
         count={totalPages}
+        page={page}
         onChange={paginate}
         variant="outlined"
         shape="rounded"
