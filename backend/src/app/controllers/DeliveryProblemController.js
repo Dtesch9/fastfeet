@@ -8,14 +8,8 @@ import Recipient from '../models/Recipient';
 
 class DeliveryProblemController {
   async index(req, res) {
-    const { page = 1 } = req.query;
-
-    const { count } = await DeliveryProblem.findAndCountAll();
-
     const problems = await DeliveryProblem.findAll({
       attributes: ['id', 'description'],
-      limit: 10,
-      offset: (page - 1) * 10,
       include: [
         {
           model: Package,
@@ -51,8 +45,6 @@ class DeliveryProblemController {
         },
       ],
     });
-
-    res.header('X-Total-Count', count);
 
     return res.json(problems);
   }
