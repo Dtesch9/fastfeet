@@ -47,22 +47,24 @@ export default function Recipient() {
           },
         });
 
+        const { length } = response.data;
+
+        if (length <= 0) {
+          setLoading(false);
+          setError(!!filter && true);
+
+          return;
+        }
+
         const pageLimit = Math.ceil(response.headers['x-total-count'] / 10);
 
         setTotalPages(pageLimit);
 
-        const { length } = response.data;
+        const data = formatData(response.data);
 
-        if (length > 0) {
-          const data = formatData(response.data);
-
-          setLoading(false);
-          setError(false);
-          setRecipients(data);
-        } else {
-          setLoading(false);
-          setError(!!filter && true);
-        }
+        setLoading(false);
+        setError(false);
+        setRecipients(data);
       } catch (err) {
         toast.error('Erro inesperado, tente novamente');
 
