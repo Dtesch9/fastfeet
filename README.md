@@ -60,6 +60,8 @@ A RESTful API using Node.js with Express
 5. Run `$ yarn sequelize db:create` to create the database;
 6. Run `$ yarn sequelize db:migrate` to run all migrations;
 7. Run `$ yarn sequelize db:seed:all` to run all seeds;
+8. Import fastfeet-insomnia.json that is at the root of this repository inside [![Download Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/)
+;
 
 ## Run 🔥 
 1. Run `$ yarn queue` to run all background jobs;
