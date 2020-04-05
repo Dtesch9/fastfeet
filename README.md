@@ -14,10 +14,10 @@
 - [References](#references)
 - [About the Project](#about-the-project)
 - [Backend](#backend)
-  - [Tecnologies](#tecnologies)
+  - [Tecnologies](#-tecnologies-)
   - [Requirements](#requirements-)
-  - [Install](#install)
-  - [Run](#run)
+  - [Install](#install-)
+  - [Run](#run-)
 
 <!-- ABOUT THE PROJECT -->
 
