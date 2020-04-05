@@ -34,12 +34,12 @@ A RESTful API using Node.js with Express
 - ⚡ Express — A web framework for Node.js
 - 💾 Sequelize — SQL dialect ORM for Node.js
 
-## ✋🏻 Requirements
+## Requirements  ✋🏻
 
 - [Node.js](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/pt-BR/docs/install)
 
-## 🔥 Install
+## Install 🔥
 
 1. Faça um clone desse repositório;
 2. Entre na pasta `cd fastfeet`;
@@ -49,7 +49,7 @@ A RESTful API using Node.js with Express
 6. Run `$ yarn sequelize db:migrate` to run all migrations;
 7. Run `$ yarn sequelize db:seed:all` to run all seeds;
 
-## 🔥 Run
+## Run 🔥 
 1. Run `$ yarn queue` to run all background jobs;
 2. Run `$ yarn dev` to run the server.
 
