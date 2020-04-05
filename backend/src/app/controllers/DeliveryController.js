@@ -25,7 +25,7 @@ class DeliveryController {
         end_date: null,
       },
       attributes: ['id', 'product', 'start_date', ['created_at', 'createdAt']],
-      order: [['updated_at', 'DESC']],
+      order: [['start_date', 'ASC']],
       limit: 5,
       offset: (page - 1) * 5,
       include: [
