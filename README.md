@@ -15,7 +15,7 @@
 - [About the Project](#about-the-project)
 - [Backend](#backend)
   - [Tecnologies](#tecnologies)
-  - [Requirements](#requirements)
+  - [Requirements](#requirements-✋🏻)
   - [Install](#install)
   - [Run](#run)
 
@@ -34,7 +34,7 @@ A RESTful API using Node.js with Express
 - ⚡ Express — A web framework for Node.js
 - 💾 Sequelize — SQL dialect ORM for Node.js
 
-## Requirements  ✋🏻
+## Requirements ✋🏻
 
 - [Node.js](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/pt-BR/docs/install)
