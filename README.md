@@ -15,7 +15,7 @@
 - [About the Project](#about-the-project)
 - [Backend](#backend)
   - [Tecnologies](#tecnologies)
-  - [Requirements](#requirements-✋🏻)
+  - [Requirements](#requirements-)
   - [Install](#install)
   - [Run](#run)
 
