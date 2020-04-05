@@ -58,8 +58,9 @@ export default function Dashboard() {
 
       setPackages(page > 1 ? [...packages, ...response.data] : response.data);
       setTotal(Number(response.headers['x-total-count']));
-      setPage(page + 1);
       setRefreshing(false);
+      setLoadingList(false);
+      setLoading(false);
     } catch (error) {
       Alert.alert(
         'Erro inesperado',
@@ -71,8 +72,6 @@ export default function Dashboard() {
       setLoading(false);
     }
 
-    setLoadingList(false);
-    setLoading(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, url]);
 
@@ -91,7 +90,7 @@ export default function Dashboard() {
     }
 
     setLoadingList(true);
-    loadPackages();
+    setPage(page + 1);
   }
 
   return (
@@ -118,7 +117,7 @@ export default function Dashboard() {
       </Header>
 
       <Deliveries
-        loading={loading}
+        loading={loading && !loadingList}
         data={packages}
         loadingList={loadingList}
         handlePacks={setSwitcher}
