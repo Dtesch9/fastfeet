@@ -33,18 +33,30 @@ A RESTful API using Node.js with Express
 
 - ⚡ Express — A web framework for Node.js
 - 💾 Sequelize — SQL dialect ORM for Node.js
+- Sentry — An open-source platform to monitoring errors in real-time.
+- bcryptjs — 
+- bee-queue — A job/task queue for Node.js
+- cors — A protocol that enables interaction with resources from a different origin
+- date-fns — A library to deal with date and time
+- jsonwebtoken — An internet standard for creating JSON-based access tokens
+- multer — A Node.js middleware for handling multipart/form-data
+- nodemailer — A module for Node.js to allow email sending
+- youch — Pretty error reporting for Node.js that helps erros to be easier to read
+- yup — A JavaScript schema builder for value parsing and validation
 
 ## Requirements ✋🏻
 
 - [Node.js](https://nodejs.org/en/)
 - [Yarn](https://yarnpkg.com/pt-BR/docs/install)
+- [Postgresql](https://www.postgresql.org/)
+- [Redis](https://redis.io/)
 
 ## Install 🔥
 
-1. Faça um clone desse repositório;
-2. Entre na pasta `cd fastfeet`;
+1. Clone this repository;
+2. Go inside the folder `cd fastfeet`;
 3. Run `$ yarn` to install dependencies;
-4. Copy .envexample inside a .env then insert with your informations;
+4. Copy the content of `.env.example` inside a a new archive `.env` then insert your credentials;
 5. Run `$ yarn sequelize db:create` to create the database;
 6. Run `$ yarn sequelize db:migrate` to run all migrations;
 7. Run `$ yarn sequelize db:seed:all` to run all seeds;
