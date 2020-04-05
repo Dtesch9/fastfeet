@@ -86,7 +86,7 @@ export default function ShowProblem() {
             keyExtractor={item => String(item.id)}
             renderItem={({ item }) => (
               <Box>
-                <Description item={item}>
+                <Description>
                   <Problem
                     switcher={toggle[item.id]}
                     onPress={() => handleToggle(item.id)}

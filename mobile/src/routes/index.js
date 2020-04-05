@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { RectButton } from 'react-native-gesture-handler';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
@@ -14,11 +15,20 @@ const Stack = createStackNavigator();
 const Tabs = createBottomTabNavigator();
 
 function tabBarIconReorder({ color }) {
-  return <Icon name="reorder" size={24} color={color} />;
+  return (
+    <Icon style={{ marginTop: 10 }} name="reorder" size={24} color={color} />
+  );
 }
 
 function tabBarIconAccount({ color }) {
-  return <Icon name="account-circle" size={24} color={color} />;
+  return (
+    <Icon
+      style={{ marginTop: 10 }}
+      name="account-circle"
+      size={24}
+      color={color}
+    />
+  );
 }
 
 export default function createRoutes(isSigned = false, cameraStatus = false) {
@@ -33,15 +43,13 @@ export default function createRoutes(isSigned = false, cameraStatus = false) {
         inactiveTintColor: '#999999',
         style: {
           height: 70,
-          paddingTop: 10,
-          paddingBottom: 10,
-
           borderTopColor: '#00000026',
           borderTopWidth: 2,
         },
         keyboardHidesTabBar: true,
         labelStyle: {
           fontSize: 14,
+          flex: 1,
         },
       }}
     >
@@ -54,6 +62,9 @@ export default function createRoutes(isSigned = false, cameraStatus = false) {
             unmountOnBlur: true,
             tabBarLabel: 'Entregas',
             tabBarIcon: tabBarIconReorder,
+            tabBarButton: props => (
+              <RectButton rippleColor="#7D9987" {...props} />
+            ),
           };
         }}
       />
@@ -63,6 +74,9 @@ export default function createRoutes(isSigned = false, cameraStatus = false) {
         options={{
           tabBarLabel: 'Meu Perfil',
           tabBarIcon: tabBarIconAccount,
+          tabBarButton: props => (
+            <RectButton rippleColor="#7D9987" {...props} />
+          ),
         }}
       />
     </Tabs.Navigator>
