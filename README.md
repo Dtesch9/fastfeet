@@ -33,16 +33,16 @@ A RESTful API using Node.js with Express
 
 - ⚡ Express — A web framework for Node.js
 - 💾 Sequelize — SQL dialect ORM for Node.js
-- Sentry — An open-source platform to monitoring errors in real-time.
-- bcryptjs — 
-- bee-queue — A job/task queue for Node.js
-- cors — A protocol that enables interaction with resources from a different origin
-- date-fns — A library to deal with date and time
-- jsonwebtoken — An internet standard for creating JSON-based access tokens
-- multer — A Node.js middleware for handling multipart/form-data
-- nodemailer — A module for Node.js to allow email sending
-- youch — Pretty error reporting for Node.js that helps erros to be easier to read
-- yup — A JavaScript schema builder for value parsing and validation
+- :computer: Sentry — An open-source platform to monitoring errors in real-time.
+- :lock: bcryptjs —  A library to handle password hash
+- :honeybee: bee-queue — A job/task queue for Node.js
+- :fax: cors — A protocol that enables interaction with resources from a different origin
+- :alarm_clock: date-fns — A library to deal with date and time
+- :key: jsonwebtoken — An internet standard for creating JSON-based access tokens
+- :paperclip: multer — A Node.js middleware for handling multipart/form-data
+- :mailbox: nodemailer — A module for Node.js to allow email sending
+- :eyeglasses: youch — Pretty error reporting for Node.js that helps erros to be easier to read
+- :memo: yup — A JavaScript schema builder for value parsing and validation
 
 ## Requirements ✋🏻
 
