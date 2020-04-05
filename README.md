@@ -1,7 +1,7 @@
 <!-- LOGO -->
 <br />
 <p align="center">
-  <a href="https://rocketseat.com.br">
+  <a href="https://github.com/Dtesch9/fastfeet">
     <img src="https://i.imgur.com/UP8yGBg.png" alt="Logo">
   </a>
 
