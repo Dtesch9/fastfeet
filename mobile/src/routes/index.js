@@ -63,7 +63,7 @@ export default function createRoutes(isSigned = false, cameraStatus = false) {
             tabBarLabel: 'Entregas',
             tabBarIcon: tabBarIconReorder,
             tabBarButton: props => (
-              <RectButton rippleColor="#7D9987" {...props} />
+              <RectButton rippleColor="#7d9da9" {...props} />
             ),
           };
         }}
@@ -75,7 +75,7 @@ export default function createRoutes(isSigned = false, cameraStatus = false) {
           tabBarLabel: 'Meu Perfil',
           tabBarIcon: tabBarIconAccount,
           tabBarButton: props => (
-            <RectButton rippleColor="#7D9987" {...props} />
+            <RectButton rippleColor="#7d9da9" {...props} />
           ),
         }}
       />
