@@ -25,7 +25,7 @@
 
 ## About the Project
 
-O serviço de entregas FastFeet é uma aplicação semelhante aos corrêios. Administrador parte (web) e funcionarios/entregadore parte (mobile) consumindo API própria.
+The delivery service FastFeet is an application similar to the post offices. Manager (web) and employees/delivery man (mobile) consuming it's own API.
 
 ## Backend
 
@@ -36,15 +36,15 @@ A RESTful API using Node.js with Express
 - ⚡ Express — A web framework for Node.js
 - 💾 Sequelize — SQL dialect ORM for Node.js
 - :computer: Sentry — An open-source platform to monitoring errors in real-time.
-- :lock: bcryptjs —  A library to handle password hash
-- :honeybee: bee-queue — A job/task queue for Node.js
-- :fax: cors — A protocol that enables interaction with resources from a different origin
-- :alarm_clock: date-fns — A library to deal with date and time
-- :key: jsonwebtoken — An internet standard for creating JSON-based access tokens
-- :paperclip: multer — A Node.js middleware for handling multipart/form-data
-- :mailbox: nodemailer — A module for Node.js to allow email sending
-- :eyeglasses: youch — Pretty error reporting for Node.js that helps erros to be easier to read
-- :memo: yup — A JavaScript schema builder for value parsing and validation
+- :lock: Bcryptjs —  A library to handle password hash
+- :honeybee: Bee-queue — A job/task queue for Node.js
+- :fax: Cors — A protocol that enables interaction with resources from a different origin
+- :alarm_clock: Date-fns — A library to deal with date and time
+- :key: Jsonwebtoken — An internet standard for creating JSON-based access tokens
+- :paperclip: Multer — A Node.js middleware for handling multipart/form-data
+- :mailbox: Nodemailer — A module for Node.js to allow email sending
+- :eyeglasses: Youch — Pretty error reporting for Node.js that helps erros to be easier to read
+- :memo: Yup — A JavaScript schema builder for value parsing and validation
 
 ## Requirements ✋🏻
 
@@ -63,7 +63,7 @@ A RESTful API using Node.js with Express
 6. Run `$ yarn sequelize db:migrate` to run all migrations;
 7. Run `$ yarn sequelize db:seed:all` to run all seeds;
 8. Import fastfeet-insomnia.json that is at the root of this repository inside [![Download Insomnia}](https://insomnia.rest/images/run.svg)](https://insomnia.rest/)
-;
+
 
 ## Run 🔥 
 1. Run `$ yarn queue` to run all background jobs;
