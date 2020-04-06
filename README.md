@@ -1,4 +1,3 @@
-<!-- LOGO -->
 <br />
 <p align="center">
   <a href="https://github.com/Dtesch9/fastfeet">
@@ -19,10 +18,9 @@
   - [Install](#install-)
   - [Run](#run-)
 - [Frontend](#frontend)
+  - [Some Hot Tecnologies](#Some%20Hot%20Tecnologies-)
+
   
-
-<!-- ABOUT THE PROJECT -->
-
 ## About the Project
 
 The delivery service FastFeet is an application similar to the post offices. Manager (web) and employees/delivery man (mobile) consuming it's own API.
@@ -70,3 +68,25 @@ A RESTful API using Node.js with Express
 2. Run `$ yarn dev` to run the server.
 
 ## Frontend
+
+A ReactJS project created with `create react-app`
+
+## 🚀 Some Hot Tecnologies 
+
+- [Material UI](https://material-ui.com/)
+- [Unform](https://unform.dev/)
+- [Axios](https://github.com/axios/axios)
+- [Date-fns](https://date-fns.org/)
+- [Immer](https://github.com/immerjs/immer)
+- [React Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [Prop-Types](https://reactjs.org/docs/typechecking-with-proptypes.html)
+- [React Router Dom](https://reacttraining.com/react-router/web/guides/quick-start)
+- [Redux](https://redux.js.org/)
+- [React Redux](https://redux.js.org/basics/usage-with-react)
+- [Redux Persist](https://github.com/rt2zz/redux-persist)
+- [Redux Saga](https://redux-saga.js.org/)
+- [Styled Components](https://styled-components.com/)
+- [Yup](https://github.com/jquense/yup)
+- [React Select](https://react-select.com/home)
+- [React Input Mask](https://github.com/sanniassin/react-input-mask)
+- [Reactotron](https://github.com/infinitered/reactotron)
