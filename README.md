@@ -22,6 +22,7 @@
   - [Helpers development tools](#-helpers-development-tools)
   - [ReactJS Install](#reactjs-install-)
   - [ReactJS Run](#reactjs-run-)
+  - [First Login](#first-login)
 
   
 ## About the Project
@@ -127,10 +128,10 @@ A ReactJS project created with `create react-app`
 2. Run `$ yarn dev` to start the server [Backend](#backend)
 3. Run `$ yarn dev` to start the React APP
 
-## Login
+## First Login
 
-Manager account:
 **Login:**`admin@fastfeet.com`
+
 **Password:**`123456`
 
 ![First Login](https://github.com/Dtesch9/fastfeet/blob/master/images/login.gif)
