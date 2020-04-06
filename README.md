@@ -22,7 +22,7 @@
   - [Helpers development tools](#-helpers-development-tools)
   - [ReactJS Install](#reactjs-install-)
   - [ReactJS Run](#reactjs-run-)
-  - [First Login](#-first-login)
+  - [First Login](#-first-login-heavy-check-mark)
 
   
 ## About the Project
@@ -128,7 +128,7 @@ A ReactJS project created with `create react-app`
 2. Run `$ yarn dev` to start the server [Backend](#backend)
 3. Run `$ yarn dev` to start the React APP
 
-## :on: First Login
+## First Login :heavy_check_mark:
 
 **Login:**`admin@fastfeet.com`
 
