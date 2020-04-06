@@ -26,7 +26,7 @@
 - [Mobile](#mobile)
   - [Some Tecnologies used](#-some-tecnologies-used--1)
   - [Helper development tools](#-helper-development-tools-1)
-  - [Requirements](#requirements--1)
+  - [Requirements](#-requirements--1)
   - [Install](#install--1)
   - [Run](#run--1)
   
@@ -168,9 +168,9 @@ Most are also alike as frontend, but of course there are some differences.
 - [ESLint](https://eslint.org/)
 - [react-native-community/eslint-config](https://www.npmjs.com/package/@react-native-community/eslint-config)
 
-## Requirements ✋🏻
+## :warning: Requirements ✋🏻
 
-- Android emulator — [Guid to setup environment](https://docs.rocketseat.dev/ambiente-react-native/android/emulador)
+- :iphone: Android emulator — [Guid to setup environment](https://docs.rocketseat.dev/ambiente-react-native/android/emulador)
 
 ## Install 🔥
 
@@ -181,10 +181,12 @@ Most are also alike as frontend, but of course there are some differences.
 ## Run 🔥 
 1. Open another terminal, go to `$ cd fastfeet/backend`
 2. Run `$ yarn dev` to start the server [Backend](#backend)
-3. Open another terminal, go to `$ cd fastfeet/mobile`
-4. Run `$ yarn start` to start bundle
-5. Open another terminal, inside`$ cd fastfeet/backend`
-6. Run `$ yarn dev` to run the android project
+3. Open your emulator
+4. Open another terminal, go to `$ cd fastfeet/mobile`
+5. Run `$ yarn start` to start Metro Bundler
+6. Open another terminal, inside`$ cd fastfeet/backend`
+7. Run `$ yarn android` to run the android project
 
+## Usage Tips
 
 [Back to top](#references) :arrow_up:
