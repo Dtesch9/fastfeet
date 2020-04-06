@@ -105,7 +105,6 @@ A ReactJS project created with `create react-app`
 - [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import)
 - [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y)
 - [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
-- [eslint-plugin-react-native](https://github.com/Intellicode/eslint-plugin-react-native)
 - [eslint-import-resolver-babel-plugin-root-import](https://github.com/olalonde/eslint-import-resolver-babel-root-import)
 - [Prettier](https://prettier.io/)
 - [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)
@@ -114,3 +113,14 @@ A ReactJS project created with `create react-app`
 - [customize-cra](https://github.com/arackaf/customize-cra)
 - [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks)
 - [react-app-rewired](https://github.com/timarney/react-app-rewired)
+
+## ReactJS Install 🔥
+
+1. Go to `$ cd fastfeet/frontend`;
+2. Run `$ yarn` to install dependencies;
+
+
+## ReactJS Run 🔥 
+1. Open another terminal, go to `$ cd fastfeet/backend`
+2. Run `$ yarn dev` to start the server [Backend](#backend)
+3. Run `$ yarn dev` to start the React APP
