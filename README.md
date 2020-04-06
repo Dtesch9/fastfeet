@@ -30,6 +30,8 @@
   - [Install](#install--2)
   - [Run](#run--2)
   - [Usage Tips](#usage-tips)
+- [Contato](#contato)
+  
   
   
 ## About the Project
@@ -76,7 +78,7 @@ A RESTful API using Node.js with Express
 
 ## Run 🔥 
 1. Run `$ yarn queue` to run all background jobs;
-2. Run `$ yarn dev` to run the server.
+2. Run `$ yarn dev` to run the server;
 
 ## Frontend
 
@@ -131,9 +133,9 @@ A ReactJS project created with `create react-app`
 
 
 ## Run 🔥 
-1. Open another terminal, go to `$ cd fastfeet/backend`
-2. Run `$ yarn dev` to start the server [Backend](#backend)
-3. Run `$ yarn dev` to start the React APP
+1. Open another terminal, go to `$ cd fastfeet/backend`;
+2. Run `$ yarn dev` to start the server [Backend](#backend);
+3. Run `$ yarn dev` to start the React APP;
 
 ## First Login :heavy_check_mark:
 
@@ -177,13 +179,13 @@ Most are also alike as frontend, but of course there are some differences.
 
 
 ## Run 🔥 
-1. Open another terminal, go to `$ cd fastfeet/backend`
-2. Run `$ yarn dev` to start the server [Backend](#backend)
-3. Open your emulator
-4. Open another terminal, go to `$ cd fastfeet/mobile`
-5. Run `$ yarn start` to start Metro Bundler
-6. Open another terminal, inside`$ cd fastfeet/backend`
-7. Run `$ yarn android` to run the android project
+1. Open another terminal, go to `$ cd fastfeet/backend`;
+2. Run `$ yarn dev` to start the server [Backend](#backend);
+3. Open your emulator;
+4. Open another terminal, go to `$ cd fastfeet/mobile`;
+5. Run `$ yarn start` to start Metro Bundler;
+6. Open another terminal, inside`$ cd fastfeet/backend`;
+7. Run `$ yarn android` to run the android project;
 
 ## Usage Tips
 
@@ -213,5 +215,11 @@ Most are also alike as frontend, but of course there are some differences.
 ## Send picture confirmation or take again
 
 ![Send picture confirmation or take again](https://github.com/Dtesch9/fastfeet/blob/master/images/picture-preview.gif)
+
+## Contato
+
+[Github](https://github.com/Dtesch9)
+[Linkedin](https://www.linkedin.com/in/douglas-tesch-00b7a518b/)
+
 
 [Back to top](#references) :arrow_up:
