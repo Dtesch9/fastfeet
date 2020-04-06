@@ -129,6 +129,6 @@ A ReactJS project created with `create react-app`
 
 ## Login
 
-![First Login](https://raw.githubusercontent.com/Rocketseat/rocketseat-vscode-reactjs-snippets/master/images/component.gif)
+![First Login](https://github.com/Dtesch9/fastfeet/blob/master/images/login.gif)
 
 [Back to top](#references)
