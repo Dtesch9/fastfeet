@@ -129,6 +129,10 @@ A ReactJS project created with `create react-app`
 
 ## Login
 
+Manager account:
+**Login:**`admin@fastfeet.com`
+**Password:**`123456`
+
 ![First Login](https://github.com/Dtesch9/fastfeet/blob/master/images/login.gif)
 
 [Back to top](#references)
