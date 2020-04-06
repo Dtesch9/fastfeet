@@ -20,8 +20,8 @@
 - [Frontend](#frontend)
   - [Some Hot Tecnologies](#-some-hot-tecnologies)
   - [Helpers development tools](#-helpers-development-tools)
-  - [ReactJS Install](#reactjs-install-)
-  - [ReactJS Run](#reactjs-run-)
+  - [F-Install](#f-install-)
+  - [F-Run](#f-run-)
   - [First Login](#first-login-heavy_check_mark)
 
   
@@ -117,13 +117,13 @@ A ReactJS project created with `create react-app`
 - [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks)
 - [react-app-rewired](https://github.com/timarney/react-app-rewired)
 
-## ReactJS Install 🔥
+## F Install 🔥
 
 1. Go to `$ cd fastfeet/frontend`;
 2. Run `$ yarn` to install dependencies;
 
 
-## ReactJS Run 🔥 
+## F Run 🔥 
 1. Open another terminal, go to `$ cd fastfeet/backend`
 2. Run `$ yarn dev` to start the server [Backend](#backend)
 3. Run `$ yarn dev` to start the React APP
