@@ -189,4 +189,31 @@ Most are also alike as frontend, but of course there are some differences.
 
 ## Usage Tips
 
+- [Press and hold to withdraw](#press-and-hold-to-withdraw)
+- [Pull to Refresh](#pull-to-refresh)
+- [Drop down problem](#drop-down-problem)
+- [Drop down problem](#drop-down-problem)
+- [Slide to go back](#slide-to-go-back)
+- [Send picture confirmation or take again](#send-picture-confirmation-or-take-again)
+
+## Press and hold to withdraw
+
+![Hold to fire Action](https://github.com/Dtesch9/fastfeet/blob/master/images/hold-to-fire-action.gif)
+
+## Pull to Refresh
+
+![Pull to refresh](https://github.com/Dtesch9/fastfeet/blob/master/images/pull-to-refresh.gif)
+
+## Drop down problem
+
+![Drop down problem](https://github.com/Dtesch9/fastfeet/blob/master/images/pull-to-refresh.gif)
+
+## Slide to go back
+
+![Slide to go back](https://github.com/Dtesch9/fastfeet/blob/master/images/gesture-goback.gif)
+
+## Send picture confirmation or take again
+
+![Send picture confirmation or take again](https://github.com/Dtesch9/fastfeet/blob/master/images/picture-preview.gif)
+
 [Back to top](#references) :arrow_up:
