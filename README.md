@@ -136,4 +136,4 @@ A ReactJS project created with `create react-app`
 
 ![First Login](https://github.com/Dtesch9/fastfeet/blob/master/images/login.gif)
 
-[Back to top](#references)
+[Back to top](#references) :arrow_up:
