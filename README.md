@@ -18,7 +18,7 @@
   - [Install](#install-)
   - [Run](#run-)
 - [Frontend](#frontend)
-  - [Some Hot Tecnologies](#Some%20Hot%20Tecnologies-)
+  - [Some Hot Tecnologies](#some-hot-tecnologies-)
 
   
 ## About the Project
