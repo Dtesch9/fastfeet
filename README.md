@@ -218,8 +218,9 @@ Most are also alike as frontend, but of course there are some differences.
 
 ## Contato
 
-[Github](https://github.com/Dtesch9)
-[Linkedin](https://www.linkedin.com/in/douglas-tesch-00b7a518b/)
+:link: [Github](https://github.com/Dtesch9)
+
+:link: [Linkedin](https://www.linkedin.com/in/douglas-tesch-00b7a518b/)
 
 
 [Back to top](#references) :arrow_up:
