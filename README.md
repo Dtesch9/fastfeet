@@ -29,12 +29,8 @@
   - [Requirements](#warning-requirements-)
   - [Install](#install--2)
   - [Run](#run--2)
+  - [Usage Tips](#usage-tips)
   
-  
-  
-
-  
-
   
 ## About the Project
 
@@ -206,7 +202,7 @@ Most are also alike as frontend, but of course there are some differences.
 
 ## Drop down problem
 
-![Drop down problem](https://github.com/Dtesch9/fastfeet/blob/master/images/pull-to-refresh.gif)
+![Drop down problem](https://github.com/Dtesch9/fastfeet/blob/master/images/problem-tip.gif)
 
 ## Slide to go back
 
