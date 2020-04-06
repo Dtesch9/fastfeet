@@ -126,3 +126,5 @@ A ReactJS project created with `create react-app`
 1. Open another terminal, go to `$ cd fastfeet/backend`
 2. Run `$ yarn dev` to start the server [Backend](#backend)
 3. Run `$ yarn dev` to start the React APP
+
+[Back to top](#references)
