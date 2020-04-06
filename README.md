@@ -18,7 +18,7 @@
   - [Install](#install-)
   - [Run](#run-)
 - [Frontend](#frontend)
-  - [Some Hot Used Tecnologies](#-some-hot-used-tecnologies)
+  - [Some Tecnologies used](#-some-tecnologies-used-)
   - [Helpers development tools](#-helpers-development-tools)
   - [Install](#install--1)
   - [Run](#run--1)
@@ -77,7 +77,7 @@ A RESTful API using Node.js with Express
 
 A ReactJS project created with `create react-app`
 
-## 🚀 Some Hot Used Tecnologies 
+## 🚀 Some Tecnologies used 🔥
 
 - [Material UI](https://material-ui.com/)
 - [Unform](https://unform.dev/)
