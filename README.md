@@ -27,8 +27,8 @@
   - [Some Tecnologies used](#-some-tecnologies-used--1)
   - [Helper development tools](#-helper-development-tools-1)
   - [Requirements](#waring-requirements-)
-  - [Install](#install--1)
-  - [Run](#run--1)
+  - [Install](#install--2)
+  - [Run](#run--2)
   
   
   
