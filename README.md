@@ -22,7 +22,7 @@
   - [Helpers development tools](#-helpers-development-tools)
   - [ReactJS Install](#reactjs-install-)
   - [ReactJS Run](#reactjs-run-)
-  - [First Login](#-first-login-heavy_check_mark)
+  - [First Login](#first-login-heavy_check_mark)
 
   
 ## About the Project
