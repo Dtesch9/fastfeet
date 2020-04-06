@@ -26,7 +26,7 @@
 - [Mobile](#mobile)
   - [Some Tecnologies used](#-some-tecnologies-used--1)
   - [Helper development tools](#-helper-development-tools-1)
-  - [Requirements](#waring-requirements-)
+  - [Requirements](#warning-requirements-)
   - [Install](#install--2)
   - [Run](#run--2)
   
