@@ -19,11 +19,19 @@
   - [Run](#run-)
 - [Frontend](#frontend)
   - [Some Tecnologies used](#-some-tecnologies-used-)
-  - [Helpers development tools](#-helpers-development-tools)
+  - [Helper development tools](#-helper-development-tools)
   - [Install](#install--1)
   - [Run](#run--1)
   - [First Login](#first-login-heavy_check_mark)
 - [Mobile](#mobile)
+  - [Some Tecnologies used](#-some-tecnologies-used-)
+  - [Helper development tools](#-helper-development-tools)
+  - [Install](#install--1)
+  - [Run](#run--1)
+  
+  
+  
+
   
 
   
@@ -100,7 +108,7 @@ A ReactJS project created with `create react-app`
 - [reactotron-redux](https://github.com/infinitered/reactotron/blob/master/docs/plugin-redux.md)
 - [reactotron-redux-saga](https://github.com/infinitered/reactotron/blob/master/docs/plugin-redux-saga.md)
 
-## 🚀 Helpers development tools
+## 🚀 Helper development tools
 
 - [Babel](https://babeljs.io/)
 - [babel-eslint](https://github.com/babel/babel-eslint)
@@ -139,5 +147,24 @@ A ReactJS project created with `create react-app`
 ![First Login](https://github.com/Dtesch9/fastfeet/blob/master/images/login.gif)
 
 ## Mobile
+
+Bare project created with `react-native init`
+
+## 🚀 Some Tecnologies used 🔥
+
+Most libraries used here are the same as in frontend, that's the beauty in React, but of course there are some differences.
+
+- [React Navigation](https://reactnavigation.org/)
+- [React Native Community/Async storage](https://github.com/react-native-community/async-storage)
+- [React Native Camera](https://react-native-community.github.io/react-native-camera/docs/installation.html)
+- [React Native Vector Icons](https://github.com/oblador/react-native-vector-icons)
+- [Reactotron React Native](https://github.com/infinitered/reactotron/blob/master/docs/quick-start-react-native.md)
+
+## 🚀 Helper development tools
+
+Most are also alike as frontend, but of course there are some differences.
+
+- [ESLint](https://eslint.org/)
+- [react-native-community/eslint-config](https://www.npmjs.com/package/@react-native-community/eslint-config)
 
 [Back to top](#references) :arrow_up:
