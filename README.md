@@ -147,7 +147,7 @@ A ReactJS project created with `create react-app`
 
 ## Mobile
 
-:warning: ANDROID ONLY :warning:
+:warning: **ANDROID ONLY** :warning:
 
 Bare project created with `react-native init`  
 
