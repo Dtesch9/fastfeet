@@ -145,7 +145,9 @@ A ReactJS project created with `create react-app`
 
 ## Mobile
 
-Bare project created with `react-native init`  **WARNING** ANDROID ONLY **WARNING**
+:warning: ANDROID ONLY :warning:
+
+Bare project created with `react-native init`  
 
 ## 🚀 Some Tecnologies used 🔥
 
