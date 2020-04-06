@@ -18,7 +18,8 @@
   - [Install](#install-)
   - [Run](#run-)
 - [Frontend](#frontend)
-  - [Some Hot Tecnologies](#some-hot-tecnologies-)
+  - [Some Hot Tecnologies](#-some-hot-tecnologies)
+  - [Helpers development tools](#-helpers-development-tools)
 
   
 ## About the Project
@@ -90,3 +91,26 @@ A ReactJS project created with `create react-app`
 - [React Select](https://react-select.com/home)
 - [React Input Mask](https://github.com/sanniassin/react-input-mask)
 - [Reactotron](https://github.com/infinitered/reactotron)
+- [reactotron-react-js](https://github.com/infinitered/reactotron/blob/master/docs/quick-start-react-js.md)
+- [reactotron-redux](https://github.com/infinitered/reactotron/blob/master/docs/plugin-redux.md)
+- [reactotron-redux-saga](https://github.com/infinitered/reactotron/blob/master/docs/plugin-redux-saga.md)
+
+## 🚀 Helpers development tools
+
+- [Babel](https://babeljs.io/)
+- [babel-eslint](https://github.com/babel/babel-eslint)
+- [babel-plugin-root-import](https://github.com/entwicklerstube/babel-plugin-root-import)
+- [ESLint](https://eslint.org/)
+- [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
+- [eslint-plugin-import](https://github.com/benmosher/eslint-plugin-import)
+- [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y)
+- [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react)
+- [eslint-plugin-react-native](https://github.com/Intellicode/eslint-plugin-react-native)
+- [eslint-import-resolver-babel-plugin-root-import](https://github.com/olalonde/eslint-import-resolver-babel-root-import)
+- [Prettier](https://prettier.io/)
+- [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier)
+- [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier)
+- [EditorConfig](https://editorconfig.org/)
+- [customize-cra](https://github.com/arackaf/customize-cra)
+- [eslint-plugin-react-hooks](https://github.com/facebook/react/tree/master/packages/eslint-plugin-react-hooks)
+- [react-app-rewired](https://github.com/timarney/react-app-rewired)
