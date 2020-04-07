@@ -1,4 +1,3 @@
-import * as Yup from 'yup';
 import { Op } from 'sequelize';
 
 import Recipient from '../models/Recipient';
@@ -27,28 +26,6 @@ class RecipientController {
   }
 
   async store(req, res) {
-    const schema = Yup.object().shape({
-      name: Yup.string().required(),
-      street: Yup.string().required(),
-      number: Yup.number().required(),
-      complement: Yup.string(),
-      state: Yup.string()
-        .min(2)
-        .required(),
-      city: Yup.string().required(),
-      postal_code: Yup.number().required(),
-    });
-
-    const { postal_code } = req.body;
-
-    if (postal_code && postal_code.length !== 8) {
-      return res.status(401).json({ error: 'Validation fails' });
-    }
-
-    if (!(await schema.isValid(req.body))) {
-      return res.status(401).json({ error: 'Validation fails' });
-    }
-
     const recipient = await Recipient.create(req.body);
 
     return res.json(recipient);
@@ -69,20 +46,6 @@ class RecipientController {
   }
 
   async update(req, res) {
-    const schema = Yup.object().shape({
-      name: Yup.string(),
-      street: Yup.string(),
-      number: Yup.number(),
-      complement: Yup.string(),
-      state: Yup.string().min(2),
-      city: Yup.string(),
-      postal_code: Yup.number().min(8),
-    });
-
-    if (!(await schema.isValid(req.body))) {
-      return res.status(401).json({ error: 'Validation fails' });
-    }
-
     const recipient = await Recipient.findByPk(req.params.id);
 
     if (!recipient)

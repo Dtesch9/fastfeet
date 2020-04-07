@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import multer from 'multer';
+
 import multerConfig from './config/multer';
 
 import SessionController from './app/controllers/SessionController';
@@ -14,6 +15,20 @@ import DeliveryProblemController from './app/controllers/DeliveryProblemControll
 import DeliverymanProblemController from './app/controllers/DeliverymanProblemController';
 import CancelDeliveryController from './app/controllers/CancelDeliveryController';
 
+import validateDeliverymanSession from './app/validators/Session/DeliverymanStore';
+import validateUserSession from './app/validators/Session/UserStore';
+import validateUserStore from './app/validators/User/Store';
+import validateUserUpdate from './app/validators/User/Update';
+import validateRecipientStore from './app/validators/Recipient/Store';
+import validateRecipientUpdate from './app/validators/Recipient/Update';
+import validatePackageStore from './app/validators/Package/Store';
+import validatePackageUpdate from './app/validators/Package/Update';
+import validateDeliverymanProblemStore from './app/validators/DeliverymanProblem/Store';
+import validateDeliverymanStore from './app/validators/Deliveryman/Store';
+import validateDeliverymanUpdate from './app/validators/Deliveryman/Update';
+import validateDeliveryStore from './app/validators/Delivery/Store';
+import validateDeliveryUpdate from './app/validators/Delivery/Update';
+
 import authMiddleware from './app/middlewares/auth';
 
 const routes = new Router();
@@ -23,19 +38,27 @@ const upload = multer(multerConfig);
 routes.post('/files', upload.single('file'), FileController.store);
 
 // Admin Session
-routes.post('/sessions', SessionController.store);
+routes.post('/sessions', validateUserSession, SessionController.store);
 
 // Deliveryman Session
-routes.post('/sessions/deliveryman', DeliverymanSessionController.store);
+routes.post(
+  '/sessions/deliveryman',
+  validateDeliverymanSession,
+  DeliverymanSessionController.store
+);
 
 // Delivery control | Token is not needed
 routes.get('/delivery/deliveryman/:id/deliveries', DeliveryController.index);
 routes.get('/delivery/deliveryman/:id/delivered', DeliveryController.show);
-routes.post('/delivery', DeliveryController.store);
-routes.put('/delivery', DeliveryController.update);
+routes.post('/delivery', validateDeliveryStore, DeliveryController.store);
+routes.put('/delivery', validateDeliveryUpdate, DeliveryController.update);
 
 // Delivery problems manager
-routes.post('/delivery/:id/problems', DeliverymanProblemController.store);
+routes.post(
+  '/delivery/:id/problems',
+  validateDeliverymanProblemStore,
+  DeliverymanProblemController.store
+);
 routes.get('/delivery/:id/problems', DeliveryProblemController.show);
 
 // Token authentication | Only admins
@@ -43,29 +66,41 @@ routes.use(authMiddleware);
 
 // Admin accounts manager
 routes.get('/users', UserController.index);
-routes.post('/users', UserController.store);
-routes.put('/users', UserController.update);
+routes.post('/users', validateUserStore, UserController.store);
+routes.put('/users', validateUserUpdate, UserController.update);
 routes.delete('/users/:id', UserController.delete);
 
 // Recipients register
 routes.get('/recipients', RecipientController.index);
 routes.get('/recipients/:id', RecipientController.show);
-routes.post('/recipients', RecipientController.store);
-routes.put('/recipients/:id', RecipientController.update);
+routes.post('/recipients', validateRecipientStore, RecipientController.store);
+routes.put(
+  '/recipients/:id',
+  validateRecipientUpdate,
+  RecipientController.update
+);
 routes.delete('/recipients/:id', RecipientController.delete);
 
 // Delivery men control
 routes.get('/deliveryman', DeliverymanController.index);
 routes.get('/deliveryman/:id', DeliverymanController.show);
-routes.post('/deliveryman', DeliverymanController.store);
-routes.put('/deliveryman/:id', DeliverymanController.update);
+routes.post(
+  '/deliveryman',
+  validateDeliverymanStore,
+  DeliverymanController.store
+);
+routes.put(
+  '/deliveryman/:id',
+  validateDeliverymanUpdate,
+  DeliverymanController.update
+);
 routes.delete('/deliveryman/:id', DeliverymanController.delete);
 
 // Packages control
 routes.get('/packages', PackageController.index);
 routes.get('/packages/:id', PackageController.show);
-routes.post('/packages', PackageController.store);
-routes.put('/packages/:id', PackageController.update);
+routes.post('/packages', validatePackageStore, PackageController.store);
+routes.put('/packages/:id', validatePackageUpdate, PackageController.update);
 routes.delete('/packages/:id', PackageController.delete);
 
 // Admin problems control

@@ -1,5 +1,4 @@
 import { isWithinInterval, startOfDay, endOfDay } from 'date-fns';
-import * as Yup from 'yup';
 import { Op } from 'sequelize';
 
 import Package from '../models/Package';
@@ -83,14 +82,6 @@ class DeliveryController {
   }
 
   async store(req, res) {
-    const schema = Yup.object().shape({
-      deliveryman_id: Yup.number().required(),
-    });
-
-    if (!(await schema.isValid(req.body))) {
-      return res.status(400).json({ error: 'Validation fails' });
-    }
-
     /**
      * Check if delivary man achieve max package withdraw
      */
@@ -154,14 +145,6 @@ class DeliveryController {
   }
 
   async update(req, res) {
-    const schema = Yup.object().shape({
-      signature_id: Yup.number().required(),
-    });
-
-    if (!(await schema.isValid(req.body))) {
-      return res.status(400).json({ errro: 'Validation fails' });
-    }
-
     /**
      * Check package status to finish delivery
      */

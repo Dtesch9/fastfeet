@@ -1,4 +1,3 @@
-import * as Yup from 'yup';
 import { Op } from 'sequelize';
 
 import Package from '../models/Package';
@@ -64,16 +63,6 @@ class PackageController {
   }
 
   async store(req, res) {
-    const schema = Yup.object().shape({
-      product: Yup.string().required(),
-      recipient_id: Yup.number().required(),
-      deliveryman_id: Yup.number().required(),
-    });
-
-    if (!(await schema.isValid(req.body))) {
-      return res.status(401).json({ error: 'Validation fails' });
-    }
-
     /**
      * Check all informations before create package
      */
@@ -148,16 +137,6 @@ class PackageController {
   }
 
   async update(req, res) {
-    const schema = Yup.object().shape({
-      product: Yup.string(),
-      recipient_id: Yup.number(),
-      deliveryman_id: Yup.number(),
-    });
-
-    if (!(await schema.isValid(req.body))) {
-      return res.status(401).json({ error: 'Validation fails' });
-    }
-
     const deliveryPackage = await Package.findOne({
       where: { id: req.params.id, start_date: null },
     });
