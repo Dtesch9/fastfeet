@@ -1,10 +1,12 @@
-import DeliveryProlem from '../models/DeliveryProblem';
-import Package from '../models/Package';
-import Deliveryman from '../models/Deliveryman';
-import Recipient from '../models/Recipient';
+import DeliveryProlem from '../../models/DeliveryProblem';
+import Package from '../../models/Package';
+import Deliveryman from '../../models/Deliveryman';
+import Recipient from '../../models/Recipient';
 
-import CancellationMail from '../jobs/CancellationMail';
-import Queue from '../../lib/Queue';
+import Queue from '../../../lib/Queue';
+import Cache from '../../../lib/Cache';
+
+import CancellationMail from '../../jobs/CancellationMail';
 
 class CancelDeliveryService {
   async run({ problem_id }) {
@@ -54,7 +56,9 @@ class CancelDeliveryService {
 
     /**
      * Invalidate cache
-     */
+     */ await Cache.invalidatePrefix(
+      `user:${deliveryPackage.deliveryman_id}:packages`
+    );
   }
 }
 

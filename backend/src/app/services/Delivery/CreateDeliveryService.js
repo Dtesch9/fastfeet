@@ -1,7 +1,9 @@
 import { isWithinInterval, startOfDay, endOfDay } from 'date-fns';
 import { Op } from 'sequelize';
 
-import Package from '../models/Package';
+import Package from '../../models/Package';
+
+import Cache from '../../../lib/Cache';
 
 class CreateDeliveryService {
   async run({ deliveryman_id, package_id }) {
@@ -57,6 +59,8 @@ class CreateDeliveryService {
     await deliveryPackage.update({
       start_date: new Date(),
     });
+
+    await Cache.invalidatePrefix(`user:${deliveryman_id}:packages`);
   }
 }
 

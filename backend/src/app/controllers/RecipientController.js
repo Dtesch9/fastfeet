@@ -2,6 +2,8 @@ import { Op } from 'sequelize';
 
 import Recipient from '../models/Recipient';
 
+import Cache from '../../lib/Cache';
+
 class RecipientController {
   async index(req, res) {
     const { page = 0, filter = '' } = req.query;
@@ -51,6 +53,8 @@ class RecipientController {
 
     await recipient.update(req.body);
 
+    await Cache.invalidatePrefix('packages');
+
     return res.status(200).json({ success: 'Recipiente updated successfully' });
   }
 
@@ -63,6 +67,8 @@ class RecipientController {
       return res.status(401).json({ error: 'Recipient not found' });
 
     await recipient.destroy();
+
+    await Cache.invalidatePrefix('packages');
 
     return res.status(200).json({ success: 'Deleted successfully' });
   }

@@ -4,7 +4,7 @@ import Package from '../models/Package';
 import Recipient from '../models/Recipient';
 import File from '../models/File';
 
-import CreateDeliveryService from '../services/CreateDeliveryService';
+import CreateDeliveryService from '../services/Delivery/CreateDeliveryService';
 
 import Cache from '../../lib/Cache';
 
@@ -12,15 +12,23 @@ class DeliveryController {
   async index(req, res) {
     const { page = 1 } = req.query;
 
-    // const cacheKey = `user:${req.params.id}:packages:${page}`;
-    // const cached = await Cache.get(cacheKey);
+    /**
+     * Cache
+     */
+    const cacheKey = `user:${req.params.id}:packages:${page}`;
+    const cached = await Cache.get(cacheKey);
 
-    // if (cached) {
-    //   res.header('X-Total-Count', cached.count);
+    if (cached) {
+      const count = await Cache.get(`${cacheKey}:count`);
 
-    //   return res.json(cached);
-    // }
+      res.header('X-Total-Count', count);
 
+      return res.json(cached);
+    }
+
+    /**
+     * Gether information
+     */
     const { count } = await Package.findAndCountAll({
       where: {
         deliveryman_id: req.params.id,
@@ -50,13 +58,31 @@ class DeliveryController {
 
     res.header('X-Total-Count', count);
 
-    // await Cache.set(cacheKey, { ...deliveries, count });
+    /**
+     * Store Cache
+     */
+    await Cache.set(cacheKey, deliveries);
+    await Cache.set(`${cacheKey}:count`, count);
 
     return res.json(deliveries);
   }
 
   async show(req, res) {
     const { page = 1 } = req.query;
+
+    /**
+     * Cache
+     */
+    const cacheKey = `user:${req.params.id}:packages:${page}:delivered:${page}`;
+    const cached = await Cache.get(cacheKey);
+
+    if (cached) {
+      const count = await Cache.get(`${cacheKey}:count`);
+
+      res.header('X-Total-Count', count);
+
+      return res.json(cached);
+    }
 
     const { count } = await Package.findAndCountAll({
       where: {
@@ -91,6 +117,12 @@ class DeliveryController {
     });
 
     res.header('X-Total-Count', count);
+
+    /**
+     * Store Cache
+     */
+    await Cache.set(cacheKey, deliveries);
+    await Cache.set(`${cacheKey}:count`, count);
 
     return res.json(deliveries);
   }
@@ -132,6 +164,10 @@ class DeliveryController {
       signature_id: req.body.signature_id,
       end_date: new Date(),
     });
+
+    await Cache.invalidatePrefix(
+      `user:${deliveryPackage.deliveryman_id}:packages`
+    );
 
     return res.status(200).json({ success: 'Package delivered successfully' });
   }

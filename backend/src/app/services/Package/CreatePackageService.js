@@ -1,9 +1,11 @@
-import Package from '../models/Package';
-import Deliveryman from '../models/Deliveryman';
-import Recipient from '../models/Recipient';
+import Package from '../../models/Package';
+import Deliveryman from '../../models/Deliveryman';
+import Recipient from '../../models/Recipient';
 
-import DeliveryNotificationMail from '../jobs/DeliveryNotificationMail';
-import Queue from '../../lib/Queue';
+import Queue from '../../../lib/Queue';
+import Cache from '../../../lib/Cache';
+
+import DeliveryNotificationMail from '../../jobs/DeliveryNotificationMail';
 
 class CreatePackageService {
   async run({ recipientId, deliverymanId, data }) {
@@ -35,6 +37,9 @@ class CreatePackageService {
       product,
       recipient,
     });
+
+    await Cache.invalidatePrefix('packages');
+    await Cache.invalidatePrefix(`user:${deliverymanId}:packages`);
 
     return {
       id,

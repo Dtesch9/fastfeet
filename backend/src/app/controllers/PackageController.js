@@ -5,12 +5,31 @@ import Deliveryman from '../models/Deliveryman';
 import Recipient from '../models/Recipient';
 import File from '../models/File';
 
-import CreatePackageService from '../services/CreatePackageService';
+import CreatePackageService from '../services/Package/CreatePackageService';
+
+import Cache from '../../lib/Cache';
 
 class PackageController {
   async index(req, res) {
     const { page = 1, filter = '' } = req.query;
 
+    /**
+     * Cache
+     */
+    const cacheKey = `packages:${page}`;
+    const cached = await Cache.get(cacheKey);
+
+    if (cached) {
+      const count = await Cache.get(`${cacheKey}:count`);
+
+      res.header('X-Total-Count', count);
+
+      return res.json(cached);
+    }
+
+    /**
+     * Load Data
+     */
     const { count } = await Package.findAndCountAll({
       where: { product: { [Op.iLike]: `%${filter}%` } },
     });
@@ -56,6 +75,12 @@ class PackageController {
 
     res.header('X-Total-Count', count);
 
+    /**
+     * Store Cache
+     */
+    await Cache.set(cacheKey, packages);
+    await Cache.set(`${cacheKey}:count`, count);
+
     return res.json(packages);
   }
 
@@ -72,6 +97,19 @@ class PackageController {
   async show(req, res) {
     const { id } = req.params;
 
+    /**
+     * Cache
+     */
+    const cacheKey = `packages:pack:${id}:`;
+    const cached = await Cache.get(cacheKey);
+
+    if (cached) {
+      return res.json(cached);
+    }
+
+    /**
+     * Load Data
+     */
     const pack = await Package.findByPk(id, {
       attributes: { exclude: ['createdAt', 'updatedAt'] },
       include: [
@@ -102,6 +140,11 @@ class PackageController {
 
     if (!pack) return res.status(401).json({ error: 'Package not found' });
 
+    /**
+     * Store Cache
+     */
+    await Cache.set(cacheKey, pack);
+
     return res.json(pack);
   }
 
@@ -114,7 +157,9 @@ class PackageController {
       return res.status(401).json({ error: 'Package inaccessible' });
     }
 
-    deliveryPackage.update(req.body);
+    await deliveryPackage.update(req.body);
+
+    await Cache.invalidatePrefix('packages');
 
     return res.json(deliveryPackage);
   }

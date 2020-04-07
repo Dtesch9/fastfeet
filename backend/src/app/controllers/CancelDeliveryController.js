@@ -1,4 +1,4 @@
-import CancelDeliveryService from '../services/CancelDeliveryService';
+import CancelDeliveryService from '../services/Delivery/CancelDeliveryService';
 
 class CancelDeliveryController {
   async delete(req, res) {
