@@ -5,8 +5,7 @@ import Deliveryman from '../models/Deliveryman';
 import Recipient from '../models/Recipient';
 import File from '../models/File';
 
-import DeliveryNotificationMail from '../jobs/DeliveryNotificationMail';
-import Queue from '../../lib/Queue';
+import CreatePackageService from '../services/CreatePackageService';
 
 class PackageController {
   async index(req, res) {
@@ -63,41 +62,13 @@ class PackageController {
   }
 
   async store(req, res) {
-    /**
-     * Check all informations before create package
-     */
-    const recipient = await Recipient.findByPk(req.body.recipient_id);
-
-    if (!recipient) {
-      return res.status(401).json({ error: 'Recipient does not exists' });
-    }
-
-    const deliveryman = await Deliveryman.findByPk(req.body.deliveryman_id);
-
-    if (!deliveryman) {
-      return res.status(401).json({ error: 'Delivery man does not exists' });
-    }
-
-    /**
-     * Send email to delivery man after package creation
-     */
-    const { id, product, recipient_id, deliveryman_id } = await Package.create(
-      req.body
-    );
-
-    await Queue.add(DeliveryNotificationMail.key, {
-      deliveryman,
-      id,
-      product,
-      recipient,
+    const pack = await CreatePackageService.run({
+      recipientId: req.body.recipient_id,
+      deliverymanId: req.body.deliveryman_id,
+      data: req.body,
     });
 
-    return res.json({
-      id,
-      product,
-      recipient_id,
-      deliveryman_id,
-    });
+    return res.json(pack);
   }
 
   async show(req, res) {
