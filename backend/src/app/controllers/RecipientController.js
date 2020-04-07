@@ -4,20 +4,18 @@ import Recipient from '../models/Recipient';
 
 class RecipientController {
   async index(req, res) {
-    const { page = 1, filter = '' } = req.query;
+    const { page = 0, filter = '' } = req.query;
 
     const { count } = await Recipient.findAndCountAll({
       where: { name: { [Op.iLike]: `%${filter}%` } },
-      limit: 10,
-      offset: (page - 1) * 10,
     });
 
     const recipients = await Recipient.findAll({
       where: { name: { [Op.iLike]: `%${filter}%` } },
       order: [['updated_at', 'DESC']],
       attributes: { exclude: ['createdAt', 'updatedAt'] },
-      limit: 10,
-      offset: (page - 1) * 10,
+      limit: page ? 10 : 10000000,
+      offset: page ? (page - 1) * 10 : 0,
     });
 
     res.header('X-Total-Count', count);

@@ -5,20 +5,18 @@ import File from '../models/File';
 
 class DeliverymanController {
   async index(req, res) {
-    const { page = 1, filter = '' } = req.query;
+    const { page = 0, filter = '' } = req.query;
 
     const { count } = await Deliveryman.findAndCountAll({
       where: { name: { [Op.iLike]: `%${filter}%` } },
-      limit: 10,
-      offset: (page - 1) * 10,
     });
 
     const deliverymen = await Deliveryman.findAll({
       where: { name: { [Op.iLike]: `%${filter}%` } },
       order: [['updated_at', 'DESC']],
       attributes: ['id', 'name', 'email'],
-      limit: 10,
-      offset: (page - 1) * 10,
+      limit: page ? 10 : 10000000,
+      offset: page ? (page - 1) * 10 : 0,
       include: [
         {
           model: File,

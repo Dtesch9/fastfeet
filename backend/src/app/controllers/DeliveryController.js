@@ -6,9 +6,20 @@ import File from '../models/File';
 
 import CreateDeliveryService from '../services/CreateDeliveryService';
 
+import Cache from '../../lib/Cache';
+
 class DeliveryController {
   async index(req, res) {
     const { page = 1 } = req.query;
+
+    // const cacheKey = `user:${req.params.id}:packages:${page}`;
+    // const cached = await Cache.get(cacheKey);
+
+    // if (cached) {
+    //   res.header('X-Total-Count', cached.count);
+
+    //   return res.json(cached);
+    // }
 
     const { count } = await Package.findAndCountAll({
       where: {
@@ -38,6 +49,8 @@ class DeliveryController {
     });
 
     res.header('X-Total-Count', count);
+
+    // await Cache.set(cacheKey, { ...deliveries, count });
 
     return res.json(deliveries);
   }

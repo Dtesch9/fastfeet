@@ -13,8 +13,6 @@ class PackageController {
 
     const { count } = await Package.findAndCountAll({
       where: { product: { [Op.iLike]: `%${filter}%` } },
-      limit: 10,
-      offset: (page - 1) * 10,
     });
 
     const packages = await Package.findAll({
