@@ -1,9 +1,10 @@
-import { isWithinInterval, startOfDay, endOfDay } from 'date-fns';
 import { Op } from 'sequelize';
 
 import Package from '../models/Package';
 import Recipient from '../models/Recipient';
 import File from '../models/File';
+
+import CreateDeliveryService from '../services/CreateDeliveryService';
 
 class DeliveryController {
   async index(req, res) {
@@ -82,63 +83,9 @@ class DeliveryController {
   }
 
   async store(req, res) {
-    /**
-     * Check if delivary man achieve max package withdraw
-     */
-    const day = new Date();
-
-    const { count: allDeliveries } = await Package.findAndCountAll({
-      where: {
-        deliveryman_id: req.body.deliveryman_id,
-        canceled_at: null,
-        start_date: {
-          [Op.between]: [startOfDay(day), endOfDay(day)],
-        },
-      },
-    });
-
-    if (allDeliveries > 5) {
-      return res
-        .status(401)
-        .json({ error: 'You can not exceed 5 withdraw per day' });
-    }
-
-    /**
-     * Check Package status to be delivered
-     */
-    const deliveryPackage = await Package.findByPk(req.body.id);
-
-    if (!deliveryPackage) {
-      return res.status(401).json({ error: 'Package not found' });
-    }
-
-    if (deliveryPackage.canceled_at) {
-      return res.status(401).json({ error: 'Delivery has been cancelled' });
-    }
-
-    if (deliveryPackage.end_date) {
-      return res
-        .status(401)
-        .json({ error: 'Package has already been delivered' });
-    }
-
-    if (deliveryPackage.start_date) {
-      return res.status(401).json({ error: 'Delivery is already happening' });
-    }
-
-    /**
-     * Check if withdrew time is between 8 and 18 hours
-     */
-    // const currentHour = new Date().getHours();
-
-    if (!isWithinInterval(18, { start: 8, end: 18 })) {
-      return res
-        .status(401)
-        .json({ error: 'Package can not get picked up our of time' });
-    }
-
-    await deliveryPackage.update({
-      start_date: new Date(),
+    await CreateDeliveryService.run({
+      deliveryman_id: req.body.deliveryman_id,
+      package_id: req.body.id,
     });
 
     return res.status(200).json({ success: 'Package withdrew successfully' });
