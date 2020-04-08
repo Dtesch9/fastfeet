@@ -80,11 +80,19 @@ export default function Dashboard() {
   }, [refreshing, loadPackages]);
 
   function refreshList() {
+    if (loading) {
+      return;
+    }
+
     setPage(1);
     setRefreshing(true);
   }
 
   function loadMore() {
+    if (loading) {
+      return;
+    }
+
     if (total > 0 && packages.length === total) {
       return;
     }
