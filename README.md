@@ -56,6 +56,9 @@ A RESTful API using Node.js with Express
 - :mailbox: Nodemailer — A module for Node.js to allow email sending
 - :eyeglasses: Youch — Pretty error reporting for Node.js that helps erros to be easier to read
 - :memo: Yup — A JavaScript schema builder for value parsing and validation
+- :space_invader: Express-Brute — A brute-force protection middleware for express that block massive requests.
+- :newspaper: Ioredis — A Redis client.
+- :chart_with_upwards_trend: Express-rate-limit — A IP rate limiting middleware for Express.
 
 ## Requirements ✋🏻
 
