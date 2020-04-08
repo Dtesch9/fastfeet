@@ -1,4 +1,5 @@
 import React, { useState, useEffect, memo } from 'react';
+import { isWithinInterval } from 'date-fns';
 import { Alert } from 'react-native';
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
@@ -33,6 +34,16 @@ function Deliveries({ loading, data, loadingList, handlePacks, ...rest }) {
 
   async function handleDelivery(packId) {
     try {
+      const currentHour = new Date().getHours();
+
+      if (!isWithinInterval(currentHour, { start: 8, end: 18 })) {
+        Alert.alert(
+          'Acesso negado',
+          'Retirada de pacotes permitida entre as 8hs e 18hs'
+        );
+        return;
+      }
+
       await api.post('delivery', {
         id: packId,
         deliveryman_id: userId,
