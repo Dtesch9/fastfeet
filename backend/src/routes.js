@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import multer from 'multer';
 
+import bruteFroce from './config/brute';
 import multerConfig from './config/multer';
 
 import SessionController from './app/controllers/SessionController';
@@ -38,11 +39,17 @@ const upload = multer(multerConfig);
 routes.post('/files', upload.single('file'), FileController.store);
 
 // Admin Session
-routes.post('/sessions', validateUserSession, SessionController.store);
+routes.post(
+  '/sessions',
+  bruteFroce.prevent,
+  validateUserSession,
+  SessionController.store
+);
 
 // Deliveryman Session
 routes.post(
   '/sessions/deliveryman',
+  bruteFroce.prevent,
   validateDeliverymanSession,
   DeliverymanSessionController.store
 );
