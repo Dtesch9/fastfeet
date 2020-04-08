@@ -19,7 +19,7 @@ class PackageController {
     const cacheKey = `packages:${page}`;
     const cached = await Cache.get(cacheKey);
 
-    if (cached) {
+    if (!filter && cached) {
       const count = await Cache.get(`${cacheKey}:count`);
 
       res.header('X-Total-Count', count);
@@ -78,8 +78,10 @@ class PackageController {
     /**
      * Store Cache
      */
-    await Cache.set(cacheKey, packages);
-    await Cache.set(`${cacheKey}:count`, count);
+    if (!filter) {
+      await Cache.set(cacheKey, packages);
+      await Cache.set(`${cacheKey}:count`, count);
+    }
 
     return res.json(packages);
   }
@@ -174,6 +176,8 @@ class PackageController {
     }
 
     await deliveryPackage.destroy();
+
+    await Cache.invalidatePrefix('packages');
 
     return res.status(200).json({ success: 'Deleted successfully' });
   }

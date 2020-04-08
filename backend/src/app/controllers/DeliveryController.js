@@ -44,7 +44,10 @@ class DeliveryController {
         end_date: null,
       },
       attributes: ['id', 'product', 'start_date', ['created_at', 'createdAt']],
-      order: [['start_date', 'ASC']],
+      order: [
+        ['start_date', 'ASC'],
+        ['updated_at', 'DESC'],
+      ],
       limit: 5,
       offset: (page - 1) * 5,
       include: [
