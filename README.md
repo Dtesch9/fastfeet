@@ -193,6 +193,7 @@ Most are also alike as frontend, but of course there are some differences.
 ## Usage Tips
 
 - [Press and hold to withdraw](#press-and-hold-to-withdraw)
+- [Withdraw hours limit](#withdraw-hours-limit)
 - [Pull to Refresh](#pull-to-refresh)
 - [Drop down problem](#drop-down-problem)
 - [Drop down problem](#drop-down-problem)
@@ -202,6 +203,10 @@ Most are also alike as frontend, but of course there are some differences.
 ## Press and hold to withdraw
 
 ![Hold to fire Action](https://github.com/Dtesch9/fastfeet/blob/master/images/hold-to-fire-action.gif)
+
+## Withdraw hours limit
+
+![Withdraw hours limit](https://github.com/Dtesch9/fastfeet/blob/master/images/withdraw-between-hours.gif)
 
 ## Pull to Refresh
 
