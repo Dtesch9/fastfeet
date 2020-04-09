@@ -46,6 +46,7 @@
   - [Run](#run--2)
   - [Usage Tips](#usage-tips)
 - [Contato](#contato)
+- [License](#-license)
   
   
   
@@ -239,11 +240,17 @@ Most are also alike as frontend, but of course there are some differences.
 
 ![Send picture confirmation or take again](https://github.com/Dtesch9/fastfeet/blob/master/images/picture-preview.gif)
 
+
 ## Contato
 
 :link: [Github](https://github.com/Dtesch9)
 
 :link: [Linkedin](https://www.linkedin.com/in/douglas-tesch-00b7a518b/)
+
+-----
+## :memo: License
+
+This project has MIT license. Look at [LICENSE](LICENSE.md) for details.
 
 
 [Back to top](#references) :arrow_up:
