@@ -19,7 +19,7 @@
   </a>
   
    <a href="https://github.com/Dtesch9/fastfeet/network/members">
-    <img alt="Forks" src="https://img.shields.io/github/forks/Dtesch9/fastfeet?style=social">
+    <img alt="Members" src="https://img.shields.io/github/forks/Dtesch9/fastfeet?style=social">
   </a>
 </p>
 
