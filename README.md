@@ -7,6 +7,21 @@
   <h3 align="center">By Douglas Tesch</h3>
 </p>
 <br />
+<p align="center">
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
+ 
+  <a href="https://www.linkedin.com/in/douglas-tesch-00b7a518b/">
+    <img alt="Badge" src="https://img.shields.io/badge/Developer-Douglas%20Tesch-orange">
+  </a>
+
+  <a href="https://github.com/Dtesch9/fastfeet/stargazers">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/Dtesch9/fastfeet?style=social">
+  </a>
+  
+   <a href="https://github.com/Dtesch9/fastfeet/network/members">
+    <img alt="Stargazers" src="https://img.shields.io/github/forks/Dtesch9/fastfeet?style=social">
+  </a>
+</p>
 
 ## References
 
@@ -31,6 +46,7 @@
   - [Run](#run--2)
   - [Usage Tips](#usage-tips)
 - [Contato](#contato)
+- [License](#memo-license)
   
   
   
@@ -224,11 +240,17 @@ Most are also alike as frontend, but of course there are some differences.
 
 ![Send picture confirmation or take again](https://github.com/Dtesch9/fastfeet/blob/master/images/picture-preview.gif)
 
+
 ## Contato
 
 :link: [Github](https://github.com/Dtesch9)
 
 :link: [Linkedin](https://www.linkedin.com/in/douglas-tesch-00b7a518b/)
+
+-----
+## :memo: License
+
+This project has MIT license. Look at [LICENSE](LICENSE.md) for details.
 
 
 [Back to top](#references) :arrow_up:
