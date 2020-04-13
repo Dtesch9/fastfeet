@@ -40,7 +40,7 @@ export default function Confirm() {
 
       setFileName(data.uri.split(/\D/).join(''));
       setPath(data.uri);
-      dispatch(closeCamera(false));
+      dispatch(closeCamera());
       StatusBar.setHidden(false);
     }
   }
@@ -83,7 +83,7 @@ export default function Confirm() {
 
               <SnapButton
                 onPress={() => {
-                  dispatch(openCamera(true));
+                  dispatch(openCamera());
                   setPath(null);
                   StatusBar.setHidden(true);
                 }}

@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { useNavigation } from '@react-navigation/native';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import { openCamera } from '~/store/modules/camera/action';
+import { openCamera, closeCamera } from '~/store/modules/camera/action';
 
 import { Container, Appearance, Action, Text } from './styles';
 
@@ -13,8 +13,14 @@ export default function DetailsActions({ started, delivered, packId }) {
   const dispatch = useDispatch();
   const navigation = useNavigation();
 
+  useEffect(() => {
+    return () => {
+      dispatch(closeCamera());
+    };
+  }, [dispatch]);
+
   function activeCamera() {
-    dispatch(openCamera(true));
+    dispatch(openCamera());
   }
 
   return (
