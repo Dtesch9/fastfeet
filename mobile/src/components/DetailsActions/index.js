@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import { openCamera } from '~/store/modules/user/action';
+import { openCamera } from '~/store/modules/camera/action';
 
 import { Container, Appearance, Action, Text } from './styles';
 

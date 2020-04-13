@@ -15,14 +15,6 @@ export default function user(state = INITIAL_STATE, action) {
         draft.profile = null;
         break;
       }
-      case '@user/OPEN_CAMERA': {
-        draft.cameraStatus = action.status;
-        break;
-      }
-      case '@user/CLOSE_CAMERA': {
-        draft.cameraStatus = action.status;
-        break;
-      }
       default:
     }
   });

@@ -4,7 +4,7 @@ import createRoutes from './routes';
 
 export default function App() {
   const signed = useSelector(state => state.auth.signed);
-  const cameraStatus = useSelector(state => state.user.cameraStatus);
+  const cameraStatus = useSelector(state => state.camera.cameraStatus);
 
   return createRoutes(signed, cameraStatus);
 }

@@ -6,7 +6,7 @@ import { useRoute, useNavigation } from '@react-navigation/native';
 
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import { openCamera, closeCamera } from '~/store/modules/user/action';
+import { openCamera, closeCamera } from '~/store/modules/camera/action';
 
 import api from '~/services/api';
 

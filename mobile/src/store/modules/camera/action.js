@@ -1,13 +1,13 @@
 export function openCamera(status) {
   return {
-    type: '@user/OPEN_CAMERA',
+    type: '@camera/OPEN_CAMERA',
     status,
   };
 }
 
 export function closeCamera(status) {
   return {
-    type: '@user/CLOSE_CAMERA',
+    type: '@camera/CLOSE_CAMERA',
     status,
   };
 }
