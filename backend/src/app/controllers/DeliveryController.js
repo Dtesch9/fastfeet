@@ -131,12 +131,16 @@ class DeliveryController {
   }
 
   async store(req, res) {
-    await CreateDeliveryService.run({
-      deliveryman_id: req.body.deliveryman_id,
-      package_id: req.body.id,
-    });
+    try {
+      await CreateDeliveryService.run({
+        deliveryman_id: req.body.deliveryman_id,
+        package_id: req.body.id,
+      });
 
-    return res.status(200).json({ success: 'Package withdrew successfully' });
+      return res.status(200).json({ success: 'Package withdrew successfully' });
+    } catch (error) {
+      return res.status(400).json({ error: error.message });
+    }
   }
 
   async update(req, res) {

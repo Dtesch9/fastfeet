@@ -87,13 +87,17 @@ class PackageController {
   }
 
   async store(req, res) {
-    const pack = await CreatePackageService.run({
-      recipientId: req.body.recipient_id,
-      deliverymanId: req.body.deliveryman_id,
-      data: req.body,
-    });
+    try {
+      const pack = await CreatePackageService.run({
+        recipientId: req.body.recipient_id,
+        deliverymanId: req.body.deliveryman_id,
+        data: req.body,
+      });
 
-    return res.json(pack);
+      return res.json(pack);
+    } catch (error) {
+      return res.status(400).json({ error: error.message });
+    }
   }
 
   async show(req, res) {
