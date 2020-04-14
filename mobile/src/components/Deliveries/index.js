@@ -27,6 +27,11 @@ function Deliveries({ loading, data, loadingList, handlePacks, ...rest }) {
   const userId = useSelector(state => state.user.profile.id);
 
   const [toggle, setToggle] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setIsLoading(loading);
+  }, [loading]);
 
   useEffect(() => {
     handlePacks(toggle);
@@ -77,7 +82,7 @@ function Deliveries({ loading, data, loadingList, handlePacks, ...rest }) {
         </Actions>
       </Header>
 
-      {loading ? (
+      {isLoading ? (
         <Awaiting size={100} />
       ) : (
         <Card

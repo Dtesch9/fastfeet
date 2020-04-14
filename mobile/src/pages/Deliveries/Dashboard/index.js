@@ -73,11 +73,11 @@ export default function Dashboard() {
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [page, url]);
+  }, [refreshing, page, url]);
 
   useEffect(() => {
     loadPackages();
-  }, [refreshing, loadPackages]);
+  }, [loadPackages]);
 
   function refreshList() {
     if (loading) {
