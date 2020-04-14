@@ -59,8 +59,8 @@ export default function Dashboard() {
       setPackages(page > 1 ? [...packages, ...response.data] : response.data);
       setTotal(Number(response.headers['x-total-count']));
       setRefreshing(false);
-      setLoadingList(false);
       setLoading(false);
+      setLoadingList(false);
     } catch (error) {
       Alert.alert(
         'Erro inesperado',
@@ -68,8 +68,8 @@ export default function Dashboard() {
       );
 
       setRefreshing(false);
-      setLoadingList(false);
       setLoading(false);
+      setLoadingList(false);
     }
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
